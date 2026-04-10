@@ -1,9 +1,29 @@
-# GU Club Event App
+# Gonzaga University Club Tracker
 
+A Streamlit web app for tracking student club memberships and events at Gonzaga University.
 
+## ERD
 
-Project title and description — what does your system track and why?
-Your ERD — embedded as an image (![ERD](erd.png) or similar).
-Table descriptions — briefly explain each table and its columns.
-How to run locally — what someone would need to do to run your app on their own machine (install dependencies, set up secrets, etc.).
-Live app URL — a direct link to your deployed Streamlit app.
+![ERD](club_event_ERD.png)
+
+## Tables
+
+- **students** — stores student first name, last name, and email
+- **clubs** — stores club name and description
+- **club_members** — junction table linking students to clubs (many-to-many)
+- **events** — stores event title, description, date, and location
+- **event_clubs** — junction table linking events to clubs (many-to-many)
+
+## How to Run Locally
+
+1. Clone the repo
+2. Install dependencies: `pip install -r requirements.txt`
+3. Create `.streamlit/secrets.toml` and add your database URL:
+```toml
+   DB_URL = "your-database-url-here"
+```
+4. Run the app: `streamlit run streamlit_app.py`
+
+## Live App
+
+(https://appapppy-dncg437ttmnxaqzhsfssaa.streamlit.app/)
