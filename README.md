@@ -20,7 +20,7 @@ A Streamlit web app for tracking student club memberships and events at Gonzaga 
 2. Install dependencies: `pip install -r requirements.txt`
 3. Create `.streamlit/secrets.toml` and add your database URL:
 ```toml
-   DB_URL = "postgresql://retool:npg_P9MzBvaj8sFO@ep-summer-sea-ak6tihg5-pooler.c-3.us-west-2.retooldb.com/retool?sslmode=require"
+   DB_URL = "your-database-url-here"
 ```
 4. Run the app: `streamlit run streamlit_app.py`
 
